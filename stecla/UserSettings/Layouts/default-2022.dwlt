@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 150}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 1
-  controlID: 136
+  controlID: 134
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 150}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 0
-  controlID: 137
+  controlID: 135
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -214,8 +214,8 @@ MonoBehaviour:
     y: 0
     width: 321
     height: 666
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -240,14 +240,14 @@ MonoBehaviour:
     y: 0
     width: 1155
     height: 666
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 20}
-  m_Selected: 1
+  m_Selected: 2
   m_LastSelected: 2
 --- !u!114 &11
 MonoBehaviour:
@@ -294,8 +294,8 @@ MonoBehaviour:
     y: 878
     width: 1476
     height: 69
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -320,8 +320,8 @@ MonoBehaviour:
     y: 0
     width: 444
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -364,9 +364,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3c5a0000
+      m_SelectedIDs: 10690000
       m_LastClickedID: 0
-      m_ExpandedIDs: a2f4ffff30f7ffff
+      m_ExpandedIDs: b8b3ffffccb6ffff50e2ffffaae2ffffd4e2ffff88f6ffffeef7ffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -771,7 +771,7 @@ MonoBehaviour:
       floating: 1
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 909, y: 534}
+      snapOffset: {x: 909, y: 510}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
@@ -816,9 +816,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 2.7465944, y: 4.886023, z: -4.03664}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 2.7465944, y: 4.886023, z: -4.03664}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -864,13 +864,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: -0.03936192, y: 0.95487815, z: -0.14754978, w: -0.25473297}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.03936189, y: 0.9548775, z: -0.14754967, w: -0.2547328}
   m_Size:
-    m_Target: 10
+    m_Target: 1.3164215
     speed: 2
-    m_Value: 10
+    m_Value: 1.3164215
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -950,14 +950,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: 46
-  m_LastProjectPath: "D:\\\u0445\u0437\\standoff-stekla\\stecla"
+  m_LastProjectPath: "D:\\\u0445\u0437\\standoff-stekla2\\stecla"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 105a0000
-    m_LastClickedID: 23056
-    m_ExpandedIDs: 000000000a5a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 53}
+    m_SelectedIDs: 6a590000
+    m_LastClickedID: 22890
+    m_ExpandedIDs: 00000000625900009059000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -985,7 +985,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a5a0000
+    m_ExpandedIDs: 0000000062590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.DeviceSimulation.SimulatorWindow
   m_SerializedViewValues:
-  - "D:\\\u0445\u0437\\bsa434\\BSA\\Library\\PlayModeViewStates\\3f3e84890776b0541abaa3a38a57ce28"
+  - "D:\\\u0445\u0437\\standoff-stekla2\\stecla\\Library\\PlayModeViewStates\\a31a8e51d78622a4d8f563875c3d2b0c"
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
