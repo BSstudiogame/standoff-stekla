@@ -5,11 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PlayerOnTheBridge : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] GameObject _glassBrokenPrefab; // Префаб разбитого стекла
+
+    private void OnCollisionEnter(Collision other)
     {
-        if (collision.gameObject.CompareTag("FalseGlass"))
+        if (other.gameObject.CompareTag("FalseGlass"))
         {
-            Destroy(collision.gameObject);
+            // Создаем объект с фиксированным поворотом (X = 90, Y = 0, Z = 0)
+            GameObject brokenGlass = Instantiate(_glassBrokenPrefab, other.transform.position, Quaternion.Euler(90, 0, 0));
+
+            // Копируем масштаб оригинального стекла
+            brokenGlass.transform.localScale = other.transform.localScale;
+
+            // Удаляем старый объект
+            Destroy(other.gameObject);
         }
     }
 
@@ -20,5 +29,5 @@ public class PlayerOnTheBridge : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
-
 }
+
