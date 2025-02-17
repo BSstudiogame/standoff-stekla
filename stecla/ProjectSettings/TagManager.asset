@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FalseGlass
   - DeathZone
+  - LayerKnife
   layers:
   - Default
   - TransparentFX
