@@ -5,19 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class PlayerOnTheBridge : MonoBehaviour
 {
-    [SerializeField] GameObject _glassBrokenPrefab; // Префаб разбитого стекла
+    [SerializeField] GameObject _glassBrokenPrefab;
+    [SerializeField] GameObject _canvasShop;
+    [SerializeField] FirstPersonLook _firstPersonLook;
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("FalseGlass"))
         {
-            // Создаем объект с фиксированным поворотом (X = 90, Y = 0, Z = 0)
             GameObject brokenGlass = Instantiate(_glassBrokenPrefab, other.transform.position, Quaternion.Euler(90, 0, 0));
-
-            // Копируем масштаб оригинального стекла
             brokenGlass.transform.localScale = other.transform.localScale;
-
-            // Удаляем старый объект
             Destroy(other.gameObject);
         }
     }
@@ -28,6 +25,31 @@ public class PlayerOnTheBridge : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Shop"))
+        {
+            _canvasShop.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            _firstPersonLook.enabled = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Shop"))
+        {
+            _canvasShop.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            _firstPersonLook.enabled = true;
+        }
+    }
+
+
 }
 
