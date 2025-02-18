@@ -25,7 +25,43 @@ public class PlayerOnTheBridge : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        
+
+        else if (other.gameObject.CompareTag("Level2"))
+        {
+            if (PlayerPrefs.GetInt("main") > 3)
+            {
+                Debug.Log("not");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("main", 3);
+            }
+         
+        }
+
+        else if (other.gameObject.CompareTag("Level3"))
+        {
+            if (PlayerPrefs.GetInt("main") > 6)
+            {
+                Debug.Log("not");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("main", 6);
+            }
+        }
+
+        else if (other.gameObject.CompareTag("Level4"))
+        {
+            if (PlayerPrefs.GetInt("main") > 9)
+            {
+                Debug.Log("not");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("main", 9);
+            }
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -49,7 +85,6 @@ public class PlayerOnTheBridge : MonoBehaviour
             _firstPersonLook.enabled = true;
         }
     }
-
 
 }
 
