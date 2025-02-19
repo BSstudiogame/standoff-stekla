@@ -7,7 +7,6 @@ public class PlayerOnTheBridge : MonoBehaviour
 {
     [SerializeField] GameObject _glassBrokenPrefab;
     [SerializeField] GameObject _canvasShop;
-    [SerializeField] FirstPersonLook _firstPersonLook;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -62,6 +61,42 @@ public class PlayerOnTheBridge : MonoBehaviour
                 PlayerPrefs.SetInt("main", 9);
             }
         }
+
+        else if (other.gameObject.CompareTag("level5"))
+        {
+            if (PlayerPrefs.GetInt("main") > 12)
+            {
+                Debug.Log("not");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("main", 12);
+            }
+        }
+
+        else if (other.gameObject.CompareTag("Level6"))
+        {
+            if (PlayerPrefs.GetInt("main") > 15)
+            {
+                Debug.Log("not");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("main", 15);
+            }
+        }
+
+        else if (other.gameObject.CompareTag("Level7"))
+        {
+            if (PlayerPrefs.GetInt("main") > 18)
+            {
+                Debug.Log("not");
+            }
+            else
+            {
+                PlayerPrefs.SetInt("main", 18);
+            }
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -71,7 +106,6 @@ public class PlayerOnTheBridge : MonoBehaviour
             _canvasShop.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            _firstPersonLook.enabled = false;
         }
     }
 
@@ -82,7 +116,6 @@ public class PlayerOnTheBridge : MonoBehaviour
             _canvasShop.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            _firstPersonLook.enabled = true;
         }
     }
 

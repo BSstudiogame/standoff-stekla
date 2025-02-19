@@ -403,7 +403,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 114497868231759342}
   - component: {fileID: 114762042097486276}
   - component: {fileID: 6486388817459364651}
+  - component: {fileID: 1995158651948429452}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -623,7 +624,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _glassBrokenPrefab: {fileID: 1671283460869591669, guid: cfada85c63100a143b39ecbd245340b6, type: 3}
   _canvasShop: {fileID: 0}
-  _firstPersonLook: {fileID: 114657890492222300}
+--- !u!114 &1995158651948429452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773623360729482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32507af8e73e0e24aa7e50a2d21b6fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Balance: {fileID: 0}
+  Maining: {fileID: 0}
 --- !u!1 &1963958859065967600
 GameObject:
   m_ObjectHideFlags: 0
