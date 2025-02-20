@@ -20,7 +20,15 @@ public class Knifes : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("main", 1);
+        }
 
+        if (PlayerPrefs.HasKey("knife"))
+        {
+            Debug.Log("main уже сделан, " + PlayerPrefs.GetInt("knife"));
+        }
+        else
+        {
+            PlayerPrefs.SetInt("knife", 1);
         }
     }
 
