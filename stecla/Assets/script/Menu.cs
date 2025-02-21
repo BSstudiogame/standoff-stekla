@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -27,8 +28,22 @@ public class Menu : MonoBehaviour
     }
 
 
-   public void StartingGame()
+   public void Choose()
    {
+        SceneManager.LoadScene(1);
+   }
+   public void StartPlayForPc()
+   {
+        SceneManager.LoadScene(2);
+        GameManager.Instance.isAndroid = false;
 
    }
+
+    public void StartPlayForAndroid()
+    {
+        SceneManager.LoadScene(2);
+        GameManager.Instance.isAndroid = true;
+
+    }
+
 }

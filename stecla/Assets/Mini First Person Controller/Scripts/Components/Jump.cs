@@ -27,8 +27,18 @@ public class Jump : MonoBehaviour
         // Jump when the Jump button is pressed and we are on the ground.
         if (Input.GetButtonDown("Jump") && (!groundCheck || groundCheck.isGrounded))
         {
+            JumpPlayer();
+        }
+    }
+    public void JumpPlayer()
+    {
+        if (!groundCheck || groundCheck.isGrounded)
+        {
             rigidbody.AddForce(Vector3.up * 100 * jumpStrength);
             Jumped?.Invoke();
         }
+       
     }
+
+
 }
