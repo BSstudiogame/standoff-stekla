@@ -34,14 +34,14 @@ public class Menu : MonoBehaviour
    }
    public void StartPlayForPc()
    {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
         GameManager.Instance.isAndroid = false;
 
    }
 
     public void StartPlayForAndroid()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
         GameManager.Instance.isAndroid = true;
 
     }

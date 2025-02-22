@@ -17,15 +17,15 @@ public class Shop : MonoBehaviour
     [SerializeField] GameObject _animbutterfly;
     [SerializeField] GameObject _animkarambit;
 
-    [SerializeField] Text b1;
-    [SerializeField] Text b2;
-    [SerializeField] Text b3;
-    [SerializeField] Text b4;
+    public Text b1;
+    public Text b2;
+    public Text b3;
+    public Text b4;
 
     private int _money;
 
 
-    private void Start()
+    void Start()
     {
 
         //starting is knife
@@ -124,7 +124,7 @@ public class Shop : MonoBehaviour
 
         if (PlayerPrefs.HasKey("buyThree"))
         {
-            Debug.Log("main уже сделан, " + PlayerPrefs.GetInt("buyThree"));
+            Debug.Log(":F::F:#, " + PlayerPrefs.GetInt("buyThree"));
         }
         else
         {
@@ -142,29 +142,14 @@ public class Shop : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         _money = PlayerPrefs.GetInt("balance");
 
-        if (PlayerPrefs.GetInt("buyOne") == 1)
-        {
-            b1.text = "Применить";
-        }
-
-        if (PlayerPrefs.GetInt("buyTwo") == 1)
-        {
-            b2.text = "Применить";
-        }
-
-        if (PlayerPrefs.GetInt("buyThree") == 1)
-        {
-            b3.text = "Применить";
-        }
-
-        if (PlayerPrefs.GetInt("buyFo") == 1)
-        {
-            b4.text = "Применить";
-        }
+        b1.text = PlayerPrefs.GetInt("buyOne") == 1 ? "Применить" : "Купить (1000 G)";
+        b2.text = PlayerPrefs.GetInt("buyTwo") == 1 ? "Применить" : "Купить (2200 G)";
+        b3.text = PlayerPrefs.GetInt("buyThree") == 1 ? "Применить" : "Купить (5000 G)";
+        b4.text = PlayerPrefs.GetInt("buyFo") == 1 ? "Применить" : "Купить (10000 G)";
     }
 
 
