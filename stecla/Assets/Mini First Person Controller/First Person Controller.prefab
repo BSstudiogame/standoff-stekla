@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4464631255176552
 Transform:
   m_ObjectHideFlags: 0
@@ -451,10 +451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 4207293392497186}
-  sensitivity: 4
+  sensitivity: 1
   smoothing: 1.5
   joystickCamera: {fileID: 0}
-  gameManager: {fileID: 5439397282376060969, guid: 2b5804a3435f4f945a5ced86b9cd757c, type: 3}
 --- !u!1 &1773623360729482
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,7 +563,6 @@ MonoBehaviour:
   runningKey: 304
   joystick: {fileID: 0}
   canvasStick: {fileID: 0}
-  gameManager: {fileID: 5439397282376060969, guid: 2b5804a3435f4f945a5ced86b9cd757c, type: 3}
 --- !u!114 &114497868231759342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +591,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _glassBrokenPrefab: {fileID: 1671283460869591669, guid: cfada85c63100a143b39ecbd245340b6, type: 3}
   _canvasShop: {fileID: 0}
+  _respawnCanvas: {fileID: 0}
+  _DeathZone: {fileID: 0}
+  teleportCoordinates: {x: 2.765719, y: 4.164347, z: 3.52002}
+  player: {fileID: 1773623360729482}
+  panel: {fileID: 0}
 --- !u!114 &1995158651948429452
 MonoBehaviour:
   m_ObjectHideFlags: 0

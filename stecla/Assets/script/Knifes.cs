@@ -45,8 +45,8 @@ public class Knifes : MonoBehaviour
         }
 
         BalanceInt = PlayerPrefs.GetInt("balance");
-        Balance.text = "бюь явер: " + BalanceInt.ToString() + " G";
-        Maining.text = "люимхмц: " + MainInt.ToString() + " G/ЯЕЙ";
+        Balance.text = "бюь явер: " + BalanceInt.ToString() + " п";
+        Maining.text = "люимхмц: " + MainInt.ToString() + " п/ЯЕЙ";
 
      
     }

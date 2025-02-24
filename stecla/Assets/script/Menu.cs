@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
   
     void FixedUpdate()
     {
-        Balance.text = PlayerPrefs.GetInt("balance").ToString() + " G";
+        Balance.text = PlayerPrefs.GetInt("balance").ToString() + " Ð";
     }
 
 
