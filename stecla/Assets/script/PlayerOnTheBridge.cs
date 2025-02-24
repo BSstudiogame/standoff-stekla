@@ -7,26 +7,31 @@ public class PlayerOnTheBridge : MonoBehaviour
 {
     [SerializeField] GameObject _glassBrokenPrefab;
     [SerializeField] GameObject _canvasShop;
-    [SerializeField] GameObject _respawnCanvas;
-    [SerializeField] GameObject _DeathZone;
     private bool Auts = false;
     private bool _chooseRespawn = false;
+    private float _timeForRespawn = 0.0f;
     public Vector3 teleportCoordinates;
     public GameObject player;
     public GameObject panel;
 
     void FixedUpdate()
     {
-        if (Auts && _chooseRespawn)
+        if (Auts)
         {
-            Respawn();
+            if(_timeForRespawn >= 1.5f)
+            {
+                Respawn();
+            }
+
+            _timeForRespawn += Time.deltaTime;
+          
         }
+
 
         if (Input.GetKey(KeyCode.P))
         {
-            LoadMenu();
+            MenuLoad();
         }
-            
     }
 
     private void OnCollisionEnter(Collision other)
@@ -36,14 +41,9 @@ public class PlayerOnTheBridge : MonoBehaviour
             GameObject brokenGlass = Instantiate(_glassBrokenPrefab, other.transform.position, Quaternion.Euler(90, 0, 0));
             brokenGlass.transform.localScale = other.transform.localScale;
             other.gameObject.SetActive(false); 
-            StartCoroutine(ReactivateGlass(other.gameObject, 1f)); 
+            StartCoroutine(ReactivateGlass(other.gameObject, 2f)); 
             Auts = true;
-            _chooseRespawn = false;
             panel.SetActive(true);
-            _respawnCanvas.SetActive(true);
-            _DeathZone.SetActive(false);
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
         }
     }
 
@@ -58,20 +58,7 @@ public class PlayerOnTheBridge : MonoBehaviour
         player.transform.position = teleportCoordinates;
         Auts = false;
         panel.SetActive(false);
-        _respawnCanvas.SetActive(false);
-        _DeathZone.SetActive(true);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
-    public void RespawnForAdver()
-    {
-        _chooseRespawn = true;
-    }
-
-    public void RespawnForMany()
-    {
-        _chooseRespawn = true;
+        _timeForRespawn = 0.0f;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -168,12 +155,10 @@ public class PlayerOnTheBridge : MonoBehaviour
         }
     }
 
-
-
-    public void LoadMenu()
+    public void MenuLoad()
     {
         SceneManager.LoadScene(0);
-         Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
