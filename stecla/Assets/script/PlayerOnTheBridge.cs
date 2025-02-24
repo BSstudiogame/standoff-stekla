@@ -7,6 +7,25 @@ public class PlayerOnTheBridge : MonoBehaviour
 {
     [SerializeField] GameObject _glassBrokenPrefab;
     [SerializeField] GameObject _canvasShop;
+    private float timer3;
+    private byte Auts = 0;
+    public Vector3 teleportCoordinates;
+    public GameObject player;
+    public GameObject panel;
+
+    void FixedUpdate()
+    {
+
+      if(Auts == 1)
+        {
+            timer3 += Time.deltaTime;
+            if(timer3 > 1.5f)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    }
+
 
     private void OnCollisionEnter(Collision other)
     {
@@ -15,6 +34,8 @@ public class PlayerOnTheBridge : MonoBehaviour
             GameObject brokenGlass = Instantiate(_glassBrokenPrefab, other.transform.position, Quaternion.Euler(90, 0, 0));
             brokenGlass.transform.localScale = other.transform.localScale;
             Destroy(other.gameObject);
+            Auts++;
+            panel.SetActive(true);
         }
     }
 
@@ -22,7 +43,7 @@ public class PlayerOnTheBridge : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DeathZone"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            player.transform.position = teleportCoordinates;
         }
 
         else if (other.gameObject.CompareTag("Level2"))
